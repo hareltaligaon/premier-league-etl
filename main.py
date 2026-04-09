@@ -1,6 +1,9 @@
 from src.logger import get_logger
 from src.extractors.api_sports import fetch as fetch_api_sports
 from src.extractors.api_football import fetch as fetch_api_football
+from src.transformers.api_sports import transform as transform_api_sports
+from src.transformers.api_football import transform as transform_api_football
+from src.loaders.sqlite_loader import load, export_csv
 
 logger = get_logger("main")
 
@@ -10,13 +13,17 @@ def run():
 
     # --- API-Sports ---
     logger.info("--- Source: API-Sports ---")
-    api_sports_data = fetch_api_sports()
-    # TODO: transform + load (step 3 & 4)
+    raw_sports = fetch_api_sports()
+    records_sports = transform_api_sports(raw_sports)
+    load(records_sports, "standings_api_sports")
+    export_csv("standings_api_sports")
 
     # --- API-Football ---
     logger.info("--- Source: API-Football ---")
-    api_football_data = fetch_api_football()
-    # TODO: transform + load (step 3 & 4)
+    raw_football = fetch_api_football()
+    records_football = transform_api_football(raw_football)
+    load(records_football, "standings_api_football")
+    export_csv("standings_api_football")
 
     logger.info("=== ETL Pipeline complete ===")
 
