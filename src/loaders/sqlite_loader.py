@@ -54,7 +54,7 @@ def _get_connection():
     return sqlite3.connect(DB_PATH)
 
 
-def load(records: list, table: str):
+def load(records, table):
     if not records:
         logger.warning(f"No records to load into '{table}'")
         return
@@ -78,7 +78,7 @@ def load(records: list, table: str):
         conn.close()
 
 
-def export_csv(table: str):
+def export_csv(table):
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     csv_path = os.path.join(OUTPUT_DIR, f"{table}.csv")
 

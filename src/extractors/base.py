@@ -26,7 +26,7 @@ class BaseExtractor:
         """Override to add auth params (e.g. API-Football)."""
         return {}
 
-    def _get(self, endpoint: str = "", params: dict = None) -> any:
+    def _get(self, endpoint="", params=None) -> any:
         url = f"{self.base_url}{endpoint}"
         all_params = {**(params or {}), **self._get_auth_params()}
 

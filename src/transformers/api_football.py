@@ -7,7 +7,7 @@ logger = get_logger("transformer.api_football")
 REQUIRED_STANDING_FIELDS = ["team_id", "team_name", "overall_league_position", "overall_league_PTS"]
 
 
-def _build_teams_lookup(teams: list) -> dict:
+def _build_teams_lookup(teams) -> dict:
     lookup = {}
     for entry in teams:
         try:
@@ -18,7 +18,7 @@ def _build_teams_lookup(teams: list) -> dict:
     return lookup
 
 
-def _safe_int(value, field: str):
+def _safe_int(value, field):
     try:
         return int(value)
     except (TypeError, ValueError):
@@ -26,7 +26,7 @@ def _safe_int(value, field: str):
         return None
 
 
-def transform(raw: dict) -> list:
+def transform(raw) -> list:
     standings = raw.get("standings", [])
     teams = raw.get("teams", [])
     teams_lookup = _build_teams_lookup(teams)

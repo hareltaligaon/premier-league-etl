@@ -18,7 +18,7 @@ TABLES = {
 }
 
 
-def _query(sql: str, params: tuple = ()):
+def _query(sql, params=()):
     if not os.path.exists(DB_PATH):
         raise HTTPException(status_code=503, detail="Database not found. Run main.py first.")
     try:
@@ -40,7 +40,7 @@ def health():
 
 
 @app.get("/standings/{source}")
-def get_standings(source: str):
+def get_standings(source):
     if source not in TABLES:
         raise HTTPException(status_code=404, detail=f"Unknown source '{source}'. Use: {list(TABLES.keys())}")
     table = TABLES[source]
@@ -50,7 +50,7 @@ def get_standings(source: str):
 
 
 @app.get("/standings/{source}/{team_name}")
-def get_team(source: str, team_name: str):
+def get_team(source, team_name):
     if source not in TABLES:
         raise HTTPException(status_code=404, detail=f"Unknown source '{source}'. Use: {list(TABLES.keys())}")
     table = TABLES[source]
