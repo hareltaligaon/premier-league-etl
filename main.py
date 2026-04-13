@@ -6,10 +6,10 @@ logger = get_logger("main")
 
 
 def main():
-    logger.info("=== Premier League ETL Pipeline started ===")
+    logger.info("Premier League ETL Pipeline started")
     ApiSportsPipeline().run()
     ApiFootballPipeline().run()
-    logger.info("=== ETL Pipeline complete ===")
+    logger.info("ETL Pipeline complete")
 
 
 if __name__ == "__main__":

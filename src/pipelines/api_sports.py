@@ -13,7 +13,7 @@ class ApiSportsPipeline:
         self.extractor = ApiSportsExtractor()
 
     def run(self):
-        self.logger.info("--- Source: API-Sports ---")
+        self.logger.info("Source: API-Sports")
         raw = self.extractor.fetch()
         records = transform(raw)
         load(records, TABLE)
