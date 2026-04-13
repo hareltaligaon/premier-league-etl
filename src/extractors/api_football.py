@@ -30,7 +30,3 @@ class ApiFootballExtractor(BaseExtractor):
             return []
         self.logger.info(f"Received {len(data)} team records")
         return data
-
-
-def fetch_api_football() -> dict:
-    return ApiFootballExtractor().fetch()

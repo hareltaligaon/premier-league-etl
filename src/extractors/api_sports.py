@@ -30,7 +30,3 @@ class ApiSportsExtractor(BaseExtractor):
         except (KeyError, TypeError):
             self.logger.error("Unexpected teams response structure from API-Sports")
             return []
-
-
-def fetch_api_sports() -> dict:
-    return ApiSportsExtractor().fetch()
