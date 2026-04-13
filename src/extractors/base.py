@@ -12,11 +12,10 @@ class BaseExtractor:
     Provides shared retry logic — subclasses implement the API-specific details.
     """
 
-    base_url: str = ""
-    source_name: str = ""
-
-    def __init__(self):
-        self.logger = get_logger(f"extractor.{self.source_name}")
+    def __init__(self, base_url, source_name):
+        self.base_url = base_url
+        self.source_name = source_name
+        self.logger = get_logger(f"extractor.{source_name}")
 
     def _get_headers(self) -> dict:
         """Override to add auth headers (e.g. API-Sports)."""
@@ -40,8 +39,7 @@ class BaseExtractor:
                     timeout=10,
                 )
                 response.raise_for_status()
-                data = response.json()
-                return data
+                return response.json()
             except requests.exceptions.Timeout:
                 self.logger.warning(f"Timeout on attempt {attempt} for {url}")
             except requests.exceptions.HTTPError as e:

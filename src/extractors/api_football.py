@@ -3,8 +3,12 @@ from src.extractors.base import BaseExtractor
 
 
 class ApiFootballExtractor(BaseExtractor):
-    base_url = "https://apiv3.apifootball.com/"
-    source_name = "api_football"
+
+    def __init__(self):
+        super().__init__(
+            base_url="https://apiv3.apifootball.com/",
+            source_name="api_football",
+        )
 
     def _get_auth_params(self) -> dict:
         return {"APIkey": API_FOOTBALL_KEY}

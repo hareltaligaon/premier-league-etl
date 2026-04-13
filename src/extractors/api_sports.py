@@ -3,8 +3,12 @@ from src.extractors.base import BaseExtractor
 
 
 class ApiSportsExtractor(BaseExtractor):
-    base_url = "https://v3.football.api-sports.io"
-    source_name = "api_sports"
+
+    def __init__(self):
+        super().__init__(
+            base_url="https://v3.football.api-sports.io",
+            source_name="api_sports",
+        )
 
     def _get_headers(self) -> dict:
         return {"x-apisports-key": API_SPORTS_KEY}
