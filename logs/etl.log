@@ -1,0 +1,450 @@
+2026-04-09 16:40:53 | INFO     | main | === Premier League ETL Pipeline started ===
+2026-04-09 16:40:53 | INFO     | main | --- Source: API-Sports ---
+2026-04-09 16:40:53 | INFO     | main | --- Source: API-Football ---
+2026-04-09 16:40:53 | INFO     | main | === ETL Pipeline complete ===
+2026-04-09 17:15:41 | INFO     | extractor.api_sports | Fetching standings: league=39, season=2023
+2026-04-09 17:15:41 | DEBUG    | extractor.api_sports | GET https://v3.football.api-sports.io/standings params={'league': 39, 'season': 2023} (attempt 1)
+2026-04-09 17:15:42 | INFO     | extractor.api_sports | Fetching teams: league=39, season=2023
+2026-04-09 17:15:42 | DEBUG    | extractor.api_sports | GET https://v3.football.api-sports.io/teams params={'league': 39, 'season': 2023} (attempt 1)
+2026-04-09 17:15:42 | INFO     | extractor.api_sports | API-Sports: fetched 20 standings, 20 teams
+2026-04-09 17:15:42 | INFO     | extractor.api_football | Fetching standings: league_id=152
+2026-04-09 17:15:42 | DEBUG    | extractor.api_football | GET https://apiv3.apifootball.com/ params={'action': 'get_standings', 'league_id': 152, 'APIkey': 'dca75ce66afc50267304596d8411fe1fddf3186a379701f06a08fa0587f722af'} (attempt 1)
+2026-04-09 17:15:43 | INFO     | extractor.api_football | Received 20 standing records
+2026-04-09 17:15:43 | INFO     | extractor.api_football | Fetching teams: league_id=152
+2026-04-09 17:15:43 | DEBUG    | extractor.api_football | GET https://apiv3.apifootball.com/ params={'action': 'get_teams', 'league_id': 152, 'APIkey': 'dca75ce66afc50267304596d8411fe1fddf3186a379701f06a08fa0587f722af'} (attempt 1)
+2026-04-09 17:15:43 | INFO     | extractor.api_football | Received 20 team records
+2026-04-09 17:15:43 | INFO     | extractor.api_football | API-Football: fetched 20 standings, 20 teams
+2026-04-09 17:21:25 | INFO     | main | === Premier League ETL Pipeline started ===
+2026-04-09 17:21:25 | INFO     | main | --- Source: API-Sports ---
+2026-04-09 17:21:25 | INFO     | extractor.api_sports | Fetching standings: league=39, season=2023
+2026-04-09 17:21:25 | DEBUG    | extractor.api_sports | GET https://v3.football.api-sports.io/standings params={'league': 39, 'season': 2023} (attempt 1)
+2026-04-09 17:21:25 | INFO     | extractor.api_sports | Fetching teams: league=39, season=2023
+2026-04-09 17:21:25 | DEBUG    | extractor.api_sports | GET https://v3.football.api-sports.io/teams params={'league': 39, 'season': 2023} (attempt 1)
+2026-04-09 17:21:26 | INFO     | extractor.api_sports | API-Sports: fetched 20 standings, 20 teams
+2026-04-09 17:21:26 | INFO     | main | --- Source: API-Football ---
+2026-04-09 17:21:26 | INFO     | extractor.api_football | Fetching standings: league_id=152
+2026-04-09 17:21:26 | DEBUG    | extractor.api_football | GET https://apiv3.apifootball.com/ params={'action': 'get_standings', 'league_id': 152, 'APIkey': 'dca75ce66afc50267304596d8411fe1fddf3186a379701f06a08fa0587f722af'} (attempt 1)
+2026-04-09 17:21:26 | INFO     | extractor.api_football | Received 20 standing records
+2026-04-09 17:21:26 | INFO     | extractor.api_football | Fetching teams: league_id=152
+2026-04-09 17:21:26 | DEBUG    | extractor.api_football | GET https://apiv3.apifootball.com/ params={'action': 'get_teams', 'league_id': 152, 'APIkey': 'dca75ce66afc50267304596d8411fe1fddf3186a379701f06a08fa0587f722af'} (attempt 1)
+2026-04-09 17:21:27 | INFO     | extractor.api_football | Received 20 team records
+2026-04-09 17:21:27 | INFO     | extractor.api_football | API-Football: fetched 20 standings, 20 teams
+2026-04-09 17:21:27 | INFO     | main | === ETL Pipeline complete ===
+2026-04-09 17:36:26 | INFO     | extractor.api_sports | Fetching standings: league=39, season=2023
+2026-04-09 17:36:26 | DEBUG    | extractor.api_sports | GET https://v3.football.api-sports.io/standings params={'league': 39, 'season': 2023} (attempt 1)
+2026-04-09 17:36:27 | INFO     | extractor.api_sports | Fetching teams: league=39, season=2023
+2026-04-09 17:36:27 | DEBUG    | extractor.api_sports | GET https://v3.football.api-sports.io/teams params={'league': 39, 'season': 2023} (attempt 1)
+2026-04-09 17:36:27 | INFO     | extractor.api_sports | API-Sports: fetched 20 standings, 20 teams
+2026-04-09 17:36:27 | INFO     | transformer.api_sports | API-Sports transformer: 20/20 records transformed successfully
+2026-04-09 17:36:27 | INFO     | extractor.api_football | Fetching standings: league_id=152
+2026-04-09 17:36:27 | DEBUG    | extractor.api_football | GET https://apiv3.apifootball.com/ params={'action': 'get_standings', 'league_id': 152, 'APIkey': 'dca75ce66afc50267304596d8411fe1fddf3186a379701f06a08fa0587f722af'} (attempt 1)
+2026-04-09 17:36:28 | INFO     | extractor.api_football | Received 20 standing records
+2026-04-09 17:36:28 | INFO     | extractor.api_football | Fetching teams: league_id=152
+2026-04-09 17:36:28 | DEBUG    | extractor.api_football | GET https://apiv3.apifootball.com/ params={'action': 'get_teams', 'league_id': 152, 'APIkey': 'dca75ce66afc50267304596d8411fe1fddf3186a379701f06a08fa0587f722af'} (attempt 1)
+2026-04-09 17:36:29 | INFO     | extractor.api_football | Received 20 team records
+2026-04-09 17:36:29 | INFO     | extractor.api_football | API-Football: fetched 20 standings, 20 teams
+2026-04-09 17:36:29 | WARNING  | transformer.api_football | Could not convert 'founded_year' value '' to int
+2026-04-09 17:36:29 | WARNING  | transformer.api_football | Team 'Nottingham' has None values for: ['founded_year']
+2026-04-09 17:36:29 | INFO     | transformer.api_football | API-Football transformer: 20/20 records transformed successfully
+2026-04-09 17:37:26 | INFO     | extractor.api_sports | Fetching standings: league=39, season=2023
+2026-04-09 17:37:26 | DEBUG    | extractor.api_sports | GET https://v3.football.api-sports.io/standings params={'league': 39, 'season': 2023} (attempt 1)
+2026-04-09 17:37:27 | INFO     | extractor.api_sports | Fetching teams: league=39, season=2023
+2026-04-09 17:37:27 | DEBUG    | extractor.api_sports | GET https://v3.football.api-sports.io/teams params={'league': 39, 'season': 2023} (attempt 1)
+2026-04-09 17:37:27 | INFO     | extractor.api_sports | API-Sports: fetched 20 standings, 20 teams
+2026-04-09 17:37:27 | INFO     | transformer.api_sports | API-Sports transformer: 20/20 records transformed successfully
+2026-04-09 17:37:27 | INFO     | loader.sqlite | Loaded 20 records into 'standings_api_sports'
+2026-04-09 17:37:27 | INFO     | loader.sqlite | Exported 20 rows to 'C:\Users\magshimim\premier-league-etl\src\..\output\standings_api_sports.csv'
+2026-04-09 17:37:27 | INFO     | extractor.api_football | Fetching standings: league_id=152
+2026-04-09 17:37:27 | DEBUG    | extractor.api_football | GET https://apiv3.apifootball.com/ params={'action': 'get_standings', 'league_id': 152, 'APIkey': 'dca75ce66afc50267304596d8411fe1fddf3186a379701f06a08fa0587f722af'} (attempt 1)
+2026-04-09 17:37:28 | INFO     | extractor.api_football | Received 20 standing records
+2026-04-09 17:37:28 | INFO     | extractor.api_football | Fetching teams: league_id=152
+2026-04-09 17:37:28 | DEBUG    | extractor.api_football | GET https://apiv3.apifootball.com/ params={'action': 'get_teams', 'league_id': 152, 'APIkey': 'dca75ce66afc50267304596d8411fe1fddf3186a379701f06a08fa0587f722af'} (attempt 1)
+2026-04-09 17:37:29 | INFO     | extractor.api_football | Received 20 team records
+2026-04-09 17:37:29 | INFO     | extractor.api_football | API-Football: fetched 20 standings, 20 teams
+2026-04-09 17:37:29 | WARNING  | transformer.api_football | Could not convert 'founded_year' value '' to int
+2026-04-09 17:37:29 | WARNING  | transformer.api_football | Team 'Nottingham' has None values for: ['founded_year']
+2026-04-09 17:37:29 | INFO     | transformer.api_football | API-Football transformer: 20/20 records transformed successfully
+2026-04-09 17:37:29 | INFO     | loader.sqlite | Loaded 20 records into 'standings_api_football'
+2026-04-09 17:37:29 | INFO     | loader.sqlite | Exported 20 rows to 'C:\Users\magshimim\premier-league-etl\src\..\output\standings_api_football.csv'
+2026-04-09 17:38:17 | INFO     | api | GET /standings/api-sports → 20 records
+2026-04-09 17:38:17 | INFO     | api | GET /standings/api-football → 20 records
+2026-04-09 17:38:17 | INFO     | api | GET /standings/api-sports/arsenal → 1 records
+2026-04-09 17:39:12 | INFO     | main | === Premier League ETL Pipeline started ===
+2026-04-09 17:39:12 | INFO     | main | --- Source: API-Sports ---
+2026-04-09 17:39:12 | INFO     | extractor.api_sports | Fetching standings: league=39, season=2023
+2026-04-09 17:39:12 | DEBUG    | extractor.api_sports | GET https://v3.football.api-sports.io/standings params={'league': 39, 'season': 2023} (attempt 1)
+2026-04-09 17:39:12 | INFO     | extractor.api_sports | Fetching teams: league=39, season=2023
+2026-04-09 17:39:12 | DEBUG    | extractor.api_sports | GET https://v3.football.api-sports.io/teams params={'league': 39, 'season': 2023} (attempt 1)
+2026-04-09 17:39:13 | INFO     | extractor.api_sports | API-Sports: fetched 20 standings, 20 teams
+2026-04-09 17:39:13 | INFO     | transformer.api_sports | API-Sports transformer: 20/20 records transformed successfully
+2026-04-09 17:39:13 | INFO     | loader.sqlite | Loaded 20 records into 'standings_api_sports'
+2026-04-09 17:39:13 | INFO     | loader.sqlite | Exported 20 rows to 'C:\Users\magshimim\premier-league-etl\src\..\output\standings_api_sports.csv'
+2026-04-09 17:39:13 | INFO     | main | --- Source: API-Football ---
+2026-04-09 17:39:13 | INFO     | extractor.api_football | Fetching standings: league_id=152
+2026-04-09 17:39:13 | DEBUG    | extractor.api_football | GET https://apiv3.apifootball.com/ params={'action': 'get_standings', 'league_id': 152, 'APIkey': 'dca75ce66afc50267304596d8411fe1fddf3186a379701f06a08fa0587f722af'} (attempt 1)
+2026-04-09 17:39:13 | INFO     | extractor.api_football | Received 20 standing records
+2026-04-09 17:39:13 | INFO     | extractor.api_football | Fetching teams: league_id=152
+2026-04-09 17:39:13 | DEBUG    | extractor.api_football | GET https://apiv3.apifootball.com/ params={'action': 'get_teams', 'league_id': 152, 'APIkey': 'dca75ce66afc50267304596d8411fe1fddf3186a379701f06a08fa0587f722af'} (attempt 1)
+2026-04-09 17:39:14 | INFO     | extractor.api_football | Received 20 team records
+2026-04-09 17:39:14 | INFO     | extractor.api_football | API-Football: fetched 20 standings, 20 teams
+2026-04-09 17:39:14 | WARNING  | transformer.api_football | Could not convert 'founded_year' value '' to int
+2026-04-09 17:39:14 | WARNING  | transformer.api_football | Team 'Nottingham' has None values for: ['founded_year']
+2026-04-09 17:39:14 | INFO     | transformer.api_football | API-Football transformer: 20/20 records transformed successfully
+2026-04-09 17:39:14 | INFO     | loader.sqlite | Loaded 20 records into 'standings_api_football'
+2026-04-09 17:39:14 | INFO     | loader.sqlite | Exported 20 rows to 'C:\Users\magshimim\premier-league-etl\src\..\output\standings_api_football.csv'
+2026-04-09 17:39:14 | INFO     | main | === ETL Pipeline complete ===
+2026-04-09 17:40:19 | INFO     | main | === Premier League ETL Pipeline started ===
+2026-04-09 17:40:19 | INFO     | main | --- Source: API-Sports ---
+2026-04-09 17:40:19 | INFO     | extractor.api_sports | Fetching standings: league=39, season=2023
+2026-04-09 17:40:19 | DEBUG    | extractor.api_sports | GET https://v3.football.api-sports.io/standings params={'league': 39, 'season': 2023} (attempt 1)
+2026-04-09 17:40:19 | INFO     | extractor.api_sports | Fetching teams: league=39, season=2023
+2026-04-09 17:40:19 | DEBUG    | extractor.api_sports | GET https://v3.football.api-sports.io/teams params={'league': 39, 'season': 2023} (attempt 1)
+2026-04-09 17:40:20 | INFO     | extractor.api_sports | API-Sports: fetched 20 standings, 20 teams
+2026-04-09 17:40:20 | INFO     | transformer.api_sports | API-Sports transformer: 20/20 records transformed successfully
+2026-04-09 17:40:20 | INFO     | loader.sqlite | Loaded 20 records into 'standings_api_sports'
+2026-04-09 17:40:20 | INFO     | loader.sqlite | Exported 20 rows to 'C:\Users\magshimim\premier-league-etl\src\..\output\standings_api_sports.csv'
+2026-04-09 17:40:20 | INFO     | main | --- Source: API-Football ---
+2026-04-09 17:40:20 | INFO     | extractor.api_football | Fetching standings: league_id=152
+2026-04-09 17:40:20 | DEBUG    | extractor.api_football | GET https://apiv3.apifootball.com/ params={'action': 'get_standings', 'league_id': 152, 'APIkey': 'dca75ce66afc50267304596d8411fe1fddf3186a379701f06a08fa0587f722af'} (attempt 1)
+2026-04-09 17:40:21 | INFO     | extractor.api_football | Received 20 standing records
+2026-04-09 17:40:21 | INFO     | extractor.api_football | Fetching teams: league_id=152
+2026-04-09 17:40:21 | DEBUG    | extractor.api_football | GET https://apiv3.apifootball.com/ params={'action': 'get_teams', 'league_id': 152, 'APIkey': 'dca75ce66afc50267304596d8411fe1fddf3186a379701f06a08fa0587f722af'} (attempt 1)
+2026-04-09 17:40:22 | INFO     | extractor.api_football | Received 20 team records
+2026-04-09 17:40:22 | INFO     | extractor.api_football | API-Football: fetched 20 standings, 20 teams
+2026-04-09 17:40:22 | WARNING  | transformer.api_football | Could not convert 'founded_year' value '' to int
+2026-04-09 17:40:22 | WARNING  | transformer.api_football | Team 'Nottingham' has None values for: ['founded_year']
+2026-04-09 17:40:22 | INFO     | transformer.api_football | API-Football transformer: 20/20 records transformed successfully
+2026-04-09 17:40:22 | INFO     | loader.sqlite | Loaded 20 records into 'standings_api_football'
+2026-04-09 17:40:22 | INFO     | loader.sqlite | Exported 20 rows to 'C:\Users\magshimim\premier-league-etl\src\..\output\standings_api_football.csv'
+2026-04-09 17:40:22 | INFO     | main | === ETL Pipeline complete ===
+2026-04-09 17:40:33 | INFO     | api | GET /standings/api-sports → 20 records
+2026-04-09 17:40:33 | INFO     | api | GET /standings/api-football → 20 records
+2026-04-09 17:40:33 | INFO     | api | GET /standings/api-sports/arsenal → 1 records
+2026-04-09 17:40:33 | INFO     | api | GET /standings/api-football/manchester → 2 records
+2026-04-09 17:40:46 | INFO     | api | GET /standings/api-sports → 20 records
+2026-04-09 17:40:46 | INFO     | api | GET /standings/api-football → 20 records
+2026-04-09 17:40:46 | INFO     | api | GET /standings/api-sports/arsenal → 1 records
+2026-04-09 17:40:46 | INFO     | api | GET /standings/api-football/manchester → 2 records
+2026-04-12 21:23:09 | INFO     | main | === Premier League ETL Pipeline started ===
+2026-04-12 21:23:09 | INFO     | main | --- Source: API-Sports ---
+2026-04-13 12:30:30 | INFO     | main | === Premier League ETL Pipeline started ===
+2026-04-13 12:30:33 | INFO     | main | --- Source: API-Sports ---
+2026-04-13 12:33:59 | INFO     | main | === Premier League ETL Pipeline started ===
+2026-04-13 12:33:59 | INFO     | main | --- Source: API-Sports ---
+2026-04-13 12:33:59 | INFO     | extractor.api_sports | Fetching standings: league=39, season=2023
+2026-04-13 12:33:59 | DEBUG    | extractor.api_sports | GET https://v3.football.api-sports.io/standings params={'league': 39, 'season': 2023} (attempt 1)
+2026-04-13 12:33:59 | INFO     | extractor.api_sports | Fetching teams: league=39, season=2023
+2026-04-13 12:33:59 | DEBUG    | extractor.api_sports | GET https://v3.football.api-sports.io/teams params={'league': 39, 'season': 2023} (attempt 1)
+2026-04-13 12:34:00 | INFO     | extractor.api_sports | api_sports: fetched 20 standings, 20 teams
+2026-04-13 12:34:00 | INFO     | transformer.api_sports | API-Sports transformer: 20/20 records transformed successfully
+2026-04-13 12:34:00 | INFO     | loader.sqlite | Loaded 20 records into 'standings_api_sports'
+2026-04-13 12:34:00 | INFO     | loader.sqlite | Exported 20 rows to 'C:\Users\magshimim\premier-league-etl\src\..\output\standings_api_sports.csv'
+2026-04-13 12:34:00 | INFO     | main | --- Source: API-Football ---
+2026-04-13 12:34:00 | INFO     | extractor.api_football | Fetching standings: league_id=152
+2026-04-13 12:34:00 | DEBUG    | extractor.api_football | GET https://apiv3.apifootball.com/ params={'action': 'get_standings', 'league_id': 152} (attempt 1)
+2026-04-13 12:34:00 | INFO     | extractor.api_football | Received 20 standing records
+2026-04-13 12:34:00 | INFO     | extractor.api_football | Fetching teams: league_id=152
+2026-04-13 12:34:00 | DEBUG    | extractor.api_football | GET https://apiv3.apifootball.com/ params={'action': 'get_teams', 'league_id': 152} (attempt 1)
+2026-04-13 12:34:01 | INFO     | extractor.api_football | Received 20 team records
+2026-04-13 12:34:01 | INFO     | extractor.api_football | api_football: fetched 20 standings, 20 teams
+2026-04-13 12:34:01 | INFO     | transformer.api_football | API-Football transformer: 20/20 records transformed successfully
+2026-04-13 12:34:01 | INFO     | loader.sqlite | Loaded 20 records into 'standings_api_football'
+2026-04-13 12:34:01 | INFO     | loader.sqlite | Exported 20 rows to 'C:\Users\magshimim\premier-league-etl\src\..\output\standings_api_football.csv'
+2026-04-13 12:34:01 | INFO     | main | === ETL Pipeline complete ===
+2026-04-13 12:39:06 | INFO     | main | === Premier League ETL Pipeline started ===
+2026-04-13 12:39:06 | INFO     | main | --- Source: API-Sports ---
+2026-04-13 12:39:06 | INFO     | extractor.api_sports | Fetching standings: league=39, season=2023
+2026-04-13 12:39:06 | DEBUG    | extractor.api_sports | GET https://v3.football.api-sports.io/standings params={'league': 39, 'season': 2023} (attempt 1)
+2026-04-13 12:39:06 | INFO     | extractor.api_sports | Fetching teams: league=39, season=2023
+2026-04-13 12:39:06 | DEBUG    | extractor.api_sports | GET https://v3.football.api-sports.io/teams params={'league': 39, 'season': 2023} (attempt 1)
+2026-04-13 12:39:07 | INFO     | extractor.api_sports | api_sports: fetched 20 standings, 20 teams
+2026-04-13 12:39:07 | INFO     | transformer.api_sports | API-Sports transformer: 20/20 records transformed successfully
+2026-04-13 12:39:07 | INFO     | loader.sqlite | Loaded 20 records into 'standings_api_sports'
+2026-04-13 12:39:07 | INFO     | loader.sqlite | Exported 20 rows to 'C:\Users\magshimim\premier-league-etl\src\..\output\standings_api_sports.csv'
+2026-04-13 12:39:07 | INFO     | main | --- Source: API-Football ---
+2026-04-13 12:39:07 | INFO     | extractor.api_football | Fetching standings: league_id=152
+2026-04-13 12:39:07 | DEBUG    | extractor.api_football | GET https://apiv3.apifootball.com/ params={'action': 'get_standings', 'league_id': 152} (attempt 1)
+2026-04-13 12:39:07 | INFO     | extractor.api_football | Received 20 standing records
+2026-04-13 12:39:07 | INFO     | extractor.api_football | Fetching teams: league_id=152
+2026-04-13 12:39:07 | DEBUG    | extractor.api_football | GET https://apiv3.apifootball.com/ params={'action': 'get_teams', 'league_id': 152} (attempt 1)
+2026-04-13 12:39:08 | INFO     | extractor.api_football | Received 20 team records
+2026-04-13 12:39:08 | INFO     | extractor.api_football | api_football: fetched 20 standings, 20 teams
+2026-04-13 12:39:08 | INFO     | transformer.api_football | API-Football transformer: 20/20 records transformed successfully
+2026-04-13 12:39:08 | INFO     | loader.sqlite | Loaded 20 records into 'standings_api_football'
+2026-04-13 12:39:08 | INFO     | loader.sqlite | Exported 20 rows to 'C:\Users\magshimim\premier-league-etl\src\..\output\standings_api_football.csv'
+2026-04-13 12:39:08 | INFO     | main | === ETL Pipeline complete ===
+2026-04-13 12:43:50 | INFO     | main | === Premier League ETL Pipeline started ===
+2026-04-13 12:43:50 | INFO     | main | --- Source: API-Sports ---
+2026-04-13 12:43:50 | INFO     | extractor.api_sports | Fetching standings: league=39, season=2023
+2026-04-13 12:43:50 | DEBUG    | extractor.api_sports | GET https://v3.football.api-sports.io/standings params={'league': 39, 'season': 2023} (attempt 1)
+2026-04-13 12:43:51 | INFO     | extractor.api_sports | Fetching teams: league=39, season=2023
+2026-04-13 12:43:51 | DEBUG    | extractor.api_sports | GET https://v3.football.api-sports.io/teams params={'league': 39, 'season': 2023} (attempt 1)
+2026-04-13 12:43:51 | INFO     | extractor.api_sports | api_sports: fetched 20 standings, 20 teams
+2026-04-13 12:43:51 | INFO     | transformer.api_sports | API-Sports transformer: 20/20 records transformed successfully
+2026-04-13 12:43:51 | INFO     | loader.sqlite | Loaded 20 records into 'standings_api_sports'
+2026-04-13 12:43:51 | INFO     | loader.sqlite | Exported 20 rows to 'C:\Users\magshimim\premier-league-etl\src\..\output\standings_api_sports.csv'
+2026-04-13 12:43:51 | INFO     | main | --- Source: API-Football ---
+2026-04-13 12:43:51 | INFO     | extractor.api_football | Fetching standings: league_id=152
+2026-04-13 12:43:51 | DEBUG    | extractor.api_football | GET https://apiv3.apifootball.com/ params={'action': 'get_standings', 'league_id': 152} (attempt 1)
+2026-04-13 12:43:52 | INFO     | extractor.api_football | Received 20 standing records
+2026-04-13 12:43:52 | INFO     | extractor.api_football | Fetching teams: league_id=152
+2026-04-13 12:43:52 | DEBUG    | extractor.api_football | GET https://apiv3.apifootball.com/ params={'action': 'get_teams', 'league_id': 152} (attempt 1)
+2026-04-13 12:43:52 | INFO     | extractor.api_football | Received 20 team records
+2026-04-13 12:43:52 | INFO     | extractor.api_football | api_football: fetched 20 standings, 20 teams
+2026-04-13 12:43:52 | INFO     | transformer.api_football | API-Football transformer: 20/20 records transformed successfully
+2026-04-13 12:43:52 | INFO     | loader.sqlite | Loaded 20 records into 'standings_api_football'
+2026-04-13 12:43:52 | INFO     | loader.sqlite | Exported 20 rows to 'C:\Users\magshimim\premier-league-etl\src\..\output\standings_api_football.csv'
+2026-04-13 12:43:52 | INFO     | main | === ETL Pipeline complete ===
+2026-04-13 12:48:29 | INFO     | main | === Premier League ETL Pipeline started ===
+2026-04-13 12:48:29 | INFO     | pipeline.api_sports | --- Source: API-Sports ---
+2026-04-13 12:48:29 | INFO     | extractor.api_sports | Fetching standings: league=39, season=2023
+2026-04-13 12:48:29 | DEBUG    | extractor.api_sports | GET https://v3.football.api-sports.io/standings params={'league': 39, 'season': 2023} (attempt 1)
+2026-04-13 12:48:29 | INFO     | extractor.api_sports | Fetching teams: league=39, season=2023
+2026-04-13 12:48:29 | DEBUG    | extractor.api_sports | GET https://v3.football.api-sports.io/teams params={'league': 39, 'season': 2023} (attempt 1)
+2026-04-13 12:48:30 | INFO     | extractor.api_sports | api_sports: fetched 20 standings, 20 teams
+2026-04-13 12:48:30 | INFO     | transformer.api_sports | API-Sports transformer: 20/20 records transformed successfully
+2026-04-13 12:48:30 | INFO     | loader.sqlite | Loaded 20 records into 'standings_api_sports'
+2026-04-13 12:48:30 | INFO     | loader.sqlite | Exported 20 rows to 'C:\Users\magshimim\premier-league-etl\src\..\output\standings_api_sports.csv'
+2026-04-13 12:48:30 | INFO     | pipeline.api_football | --- Source: API-Football ---
+2026-04-13 12:48:30 | INFO     | extractor.api_football | Fetching standings: league_id=152
+2026-04-13 12:48:30 | DEBUG    | extractor.api_football | GET https://apiv3.apifootball.com/ params={'action': 'get_standings', 'league_id': 152} (attempt 1)
+2026-04-13 12:48:30 | INFO     | extractor.api_football | Received 20 standing records
+2026-04-13 12:48:30 | INFO     | extractor.api_football | Fetching teams: league_id=152
+2026-04-13 12:48:30 | DEBUG    | extractor.api_football | GET https://apiv3.apifootball.com/ params={'action': 'get_teams', 'league_id': 152} (attempt 1)
+2026-04-13 12:48:31 | INFO     | extractor.api_football | Received 20 team records
+2026-04-13 12:48:31 | INFO     | extractor.api_football | api_football: fetched 20 standings, 20 teams
+2026-04-13 12:48:31 | INFO     | transformer.api_football | API-Football transformer: 20/20 records transformed successfully
+2026-04-13 12:48:31 | INFO     | loader.sqlite | Loaded 20 records into 'standings_api_football'
+2026-04-13 12:48:31 | INFO     | loader.sqlite | Exported 20 rows to 'C:\Users\magshimim\premier-league-etl\src\..\output\standings_api_football.csv'
+2026-04-13 12:48:31 | INFO     | main | === ETL Pipeline complete ===
+2026-04-13 12:54:04 | INFO     | main | === Premier League ETL Pipeline started ===
+2026-04-13 12:54:04 | INFO     | pipeline.api_sports | --- Source: API-Sports ---
+2026-04-13 12:54:04 | INFO     | extractor.api_sports | Fetching standings: league=39, season=2023
+2026-04-13 12:54:04 | DEBUG    | extractor.api_sports | GET https://v3.football.api-sports.io/standings params={'league': 39, 'season': 2023} (attempt 1)
+2026-04-13 12:54:04 | INFO     | extractor.api_sports | Fetching teams: league=39, season=2023
+2026-04-13 12:54:04 | DEBUG    | extractor.api_sports | GET https://v3.football.api-sports.io/teams params={'league': 39, 'season': 2023} (attempt 1)
+2026-04-13 12:54:05 | INFO     | extractor.api_sports | api_sports: fetched 20 standings, 20 teams
+2026-04-13 12:54:05 | INFO     | transformer.api_sports | API-Sports transformer: 20/20 records transformed successfully
+2026-04-13 12:54:05 | INFO     | loader.sqlite | Loaded 20 records into 'standings_api_sports'
+2026-04-13 12:54:05 | INFO     | loader.sqlite | Exported 20 rows to 'C:\Users\magshimim\premier-league-etl\src\..\output\standings_api_sports.csv'
+2026-04-13 12:54:05 | INFO     | pipeline.api_football | --- Source: API-Football ---
+2026-04-13 12:54:05 | INFO     | extractor.api_football | Fetching standings: league_id=152
+2026-04-13 12:54:05 | DEBUG    | extractor.api_football | GET https://apiv3.apifootball.com/ params={'action': 'get_standings', 'league_id': 152} (attempt 1)
+2026-04-13 12:54:05 | INFO     | extractor.api_football | Received 20 standing records
+2026-04-13 12:54:05 | INFO     | extractor.api_football | Fetching teams: league_id=152
+2026-04-13 12:54:05 | DEBUG    | extractor.api_football | GET https://apiv3.apifootball.com/ params={'action': 'get_teams', 'league_id': 152} (attempt 1)
+2026-04-13 12:54:06 | INFO     | extractor.api_football | Received 20 team records
+2026-04-13 12:54:06 | INFO     | extractor.api_football | api_football: fetched 20 standings, 20 teams
+2026-04-13 12:54:06 | INFO     | transformer.api_football | API-Football transformer: 20/20 records transformed successfully
+2026-04-13 12:54:06 | INFO     | loader.sqlite | Loaded 20 records into 'standings_api_football'
+2026-04-13 12:54:06 | INFO     | loader.sqlite | Exported 20 rows to 'C:\Users\magshimim\premier-league-etl\src\..\output\standings_api_football.csv'
+2026-04-13 12:54:06 | INFO     | main | === ETL Pipeline complete ===
+2026-04-13 12:55:46 | INFO     | main | Premier League ETL Pipeline started
+2026-04-13 12:55:46 | INFO     | pipeline.api_sports | Source: API-Sports
+2026-04-13 12:55:46 | INFO     | extractor.api_sports | Fetching standings: league=39, season=2023
+2026-04-13 12:55:46 | DEBUG    | extractor.api_sports | GET https://v3.football.api-sports.io/standings params={'league': 39, 'season': 2023} (attempt 1)
+2026-04-13 12:55:46 | INFO     | extractor.api_sports | Fetching teams: league=39, season=2023
+2026-04-13 12:55:46 | DEBUG    | extractor.api_sports | GET https://v3.football.api-sports.io/teams params={'league': 39, 'season': 2023} (attempt 1)
+2026-04-13 12:55:47 | INFO     | extractor.api_sports | api_sports: fetched 20 standings, 20 teams
+2026-04-13 12:55:47 | INFO     | transformer.api_sports | API-Sports transformer: 20/20 records transformed successfully
+2026-04-13 12:55:47 | INFO     | loader.sqlite | Loaded 20 records into 'standings_api_sports'
+2026-04-13 12:55:47 | INFO     | loader.sqlite | Exported 20 rows to 'C:\Users\magshimim\premier-league-etl\src\..\output\standings_api_sports.csv'
+2026-04-13 12:55:47 | INFO     | pipeline.api_football | Source: API-Football
+2026-04-13 12:55:47 | INFO     | extractor.api_football | Fetching standings: league_id=152
+2026-04-13 12:55:47 | DEBUG    | extractor.api_football | GET https://apiv3.apifootball.com/ params={'action': 'get_standings', 'league_id': 152} (attempt 1)
+2026-04-13 12:55:47 | INFO     | extractor.api_football | Received 20 standing records
+2026-04-13 12:55:47 | INFO     | extractor.api_football | Fetching teams: league_id=152
+2026-04-13 12:55:47 | DEBUG    | extractor.api_football | GET https://apiv3.apifootball.com/ params={'action': 'get_teams', 'league_id': 152} (attempt 1)
+2026-04-13 12:55:48 | INFO     | extractor.api_football | Received 20 team records
+2026-04-13 12:55:48 | INFO     | extractor.api_football | api_football: fetched 20 standings, 20 teams
+2026-04-13 12:55:48 | INFO     | transformer.api_football | API-Football transformer: 20/20 records transformed successfully
+2026-04-13 12:55:48 | INFO     | loader.sqlite | Loaded 20 records into 'standings_api_football'
+2026-04-13 12:55:48 | INFO     | loader.sqlite | Exported 20 rows to 'C:\Users\magshimim\premier-league-etl\src\..\output\standings_api_football.csv'
+2026-04-13 12:55:48 | INFO     | main | ETL Pipeline complete
+2026-04-13 13:00:26 | INFO     | main | Premier League ETL Pipeline started
+2026-04-13 13:00:26 | INFO     | pipeline.api_sports | Source: API-Sports
+2026-04-13 13:00:26 | INFO     | extractor.api_sports | Fetching standings: league=39, season=2023
+2026-04-13 13:00:26 | DEBUG    | extractor.api_sports | GET https://v3.football.api-sports.io/standings params={'league': 39, 'season': 2023} (attempt 1)
+2026-04-13 13:00:26 | INFO     | extractor.api_sports | Fetching teams: league=39, season=2023
+2026-04-13 13:00:26 | DEBUG    | extractor.api_sports | GET https://v3.football.api-sports.io/teams params={'league': 39, 'season': 2023} (attempt 1)
+2026-04-13 13:00:26 | INFO     | extractor.api_sports | api_sports: fetched 20 standings, 20 teams
+2026-04-13 13:00:26 | INFO     | transformer.api_sports | API-Sports transformer: 20/20 records transformed successfully
+2026-04-13 13:00:27 | INFO     | loader.sqlite | Loaded 20 records into 'standings_api_sports'
+2026-04-13 13:00:27 | INFO     | loader.sqlite | Exported 20 rows to 'C:\Users\magshimim\premier-league-etl\src\..\output\standings_api_sports.csv'
+2026-04-13 13:00:27 | INFO     | pipeline.api_football | Source: API-Football
+2026-04-13 13:00:27 | INFO     | extractor.api_football | Fetching standings: league_id=152
+2026-04-13 13:00:27 | DEBUG    | extractor.api_football | GET https://apiv3.apifootball.com/ params={'action': 'get_standings', 'league_id': 152} (attempt 1)
+2026-04-13 13:00:27 | INFO     | extractor.api_football | Received 20 standing records
+2026-04-13 13:00:27 | INFO     | extractor.api_football | Fetching teams: league_id=152
+2026-04-13 13:00:27 | DEBUG    | extractor.api_football | GET https://apiv3.apifootball.com/ params={'action': 'get_teams', 'league_id': 152} (attempt 1)
+2026-04-13 13:00:28 | INFO     | extractor.api_football | Received 20 team records
+2026-04-13 13:00:28 | INFO     | extractor.api_football | api_football: fetched 20 standings, 20 teams
+2026-04-13 13:00:28 | INFO     | transformer.api_football | API-Football transformer: 20/20 records transformed successfully
+2026-04-13 13:00:28 | INFO     | loader.sqlite | Loaded 20 records into 'standings_api_football'
+2026-04-13 13:00:28 | INFO     | loader.sqlite | Exported 20 rows to 'C:\Users\magshimim\premier-league-etl\src\..\output\standings_api_football.csv'
+2026-04-13 13:00:28 | INFO     | error_collector | Pipeline run summary
+2026-04-13 13:00:28 | INFO     | error_collector |   Errors:   0
+2026-04-13 13:00:28 | INFO     | error_collector |   Warnings: 0
+2026-04-13 13:00:28 | INFO     | error_collector |   No issues detected
+2026-04-13 13:00:28 | INFO     | main | ETL Pipeline complete
+2026-04-13 17:28:28 | INFO     | main | Premier League ETL Pipeline started
+2026-04-13 18:49:52 | INFO     | main | Premier League ETL Pipeline started
+2026-04-13 18:49:52 | INFO     | pipeline.api_sports | Source: API-Sports
+2026-04-13 18:49:52 | INFO     | extractor.api_sports | Fetching standings: league=39, season=2023
+2026-04-13 18:49:52 | DEBUG    | extractor.api_sports | GET https://v3.football.api-sports.io/standings params={'league': 39, 'season': 2023} (attempt 1)
+2026-04-13 18:49:52 | INFO     | extractor.api_sports | Fetching teams: league=39, season=2023
+2026-04-13 18:49:52 | DEBUG    | extractor.api_sports | GET https://v3.football.api-sports.io/teams params={'league': 39, 'season': 2023} (attempt 1)
+2026-04-13 18:49:53 | INFO     | extractor.api_sports | api_sports: fetched 20 standings, 20 teams
+2026-04-13 18:49:53 | INFO     | transformer.api_sports | API-Sports transformer: 20/20 records transformed successfully
+2026-04-13 18:50:31 | INFO     | main | Premier League ETL Pipeline started
+2026-04-13 18:50:31 | INFO     | pipeline.api_sports | Source: API-Sports
+2026-04-13 18:50:31 | INFO     | extractor.api_sports | Fetching standings: league=39, season=2023
+2026-04-13 18:50:31 | DEBUG    | extractor.api_sports | GET https://v3.football.api-sports.io/standings params={'league': 39, 'season': 2023} (attempt 1)
+2026-04-13 18:50:31 | INFO     | extractor.api_sports | Fetching teams: league=39, season=2023
+2026-04-13 18:50:31 | DEBUG    | extractor.api_sports | GET https://v3.football.api-sports.io/teams params={'league': 39, 'season': 2023} (attempt 1)
+2026-04-13 18:50:31 | INFO     | extractor.api_sports | api_sports: fetched 20 standings, 20 teams
+2026-04-13 18:50:31 | INFO     | transformer.api_sports | API-Sports transformer: 20/20 records transformed successfully
+2026-04-13 18:51:10 | INFO     | main | Premier League ETL Pipeline started
+2026-04-13 18:51:10 | INFO     | pipeline.api_sports | Source: API-Sports
+2026-04-13 18:51:10 | INFO     | extractor.api_sports | Fetching standings: league=39, season=2023
+2026-04-13 18:51:10 | DEBUG    | extractor.api_sports | GET https://v3.football.api-sports.io/standings params={'league': 39, 'season': 2023} (attempt 1)
+2026-04-13 18:51:10 | INFO     | extractor.api_sports | Fetching teams: league=39, season=2023
+2026-04-13 18:51:10 | DEBUG    | extractor.api_sports | GET https://v3.football.api-sports.io/teams params={'league': 39, 'season': 2023} (attempt 1)
+2026-04-13 18:51:10 | INFO     | extractor.api_sports | api_sports: fetched 20 standings, 20 teams
+2026-04-13 18:51:10 | INFO     | transformer.api_sports | API-Sports transformer: 20/20 records transformed successfully
+2026-04-13 18:52:33 | INFO     | main | Premier League ETL Pipeline started
+2026-04-13 18:52:33 | INFO     | pipeline.api_sports | Source: API-Sports
+2026-04-13 18:52:33 | INFO     | extractor.api_sports | Fetching standings: league=39, season=2023
+2026-04-13 18:52:33 | DEBUG    | extractor.api_sports | GET https://v3.football.api-sports.io/standings params={'league': 39, 'season': 2023} (attempt 1)
+2026-04-13 18:52:33 | INFO     | extractor.api_sports | Fetching teams: league=39, season=2023
+2026-04-13 18:52:33 | DEBUG    | extractor.api_sports | GET https://v3.football.api-sports.io/teams params={'league': 39, 'season': 2023} (attempt 1)
+2026-04-13 18:52:33 | INFO     | extractor.api_sports | api_sports: fetched 20 standings, 20 teams
+2026-04-13 18:52:33 | INFO     | transformer.api_sports | API-Sports transformer: 20/20 records transformed successfully
+2026-04-13 18:52:40 | INFO     | loader.bigquery | Created BigQuery dataset 'premier_league'
+2026-04-13 18:52:44 | INFO     | loader.bigquery | Loaded 20 records into BigQuery 'standings_api_sports'
+2026-04-13 18:52:47 | INFO     | loader.bigquery | Exported 20 rows to 'C:\Users\magshimim\premier-league-etl\src\..\output\standings_api_sports.csv'
+2026-04-13 18:52:47 | INFO     | pipeline.api_football | Source: API-Football
+2026-04-13 18:52:47 | INFO     | extractor.api_football | Fetching standings: league_id=152
+2026-04-13 18:52:47 | DEBUG    | extractor.api_football | GET https://apiv3.apifootball.com/ params={'action': 'get_standings', 'league_id': 152} (attempt 1)
+2026-04-13 18:52:47 | INFO     | extractor.api_football | Received 20 standing records
+2026-04-13 18:52:47 | INFO     | extractor.api_football | Fetching teams: league_id=152
+2026-04-13 18:52:47 | DEBUG    | extractor.api_football | GET https://apiv3.apifootball.com/ params={'action': 'get_teams', 'league_id': 152} (attempt 1)
+2026-04-13 18:52:48 | INFO     | extractor.api_football | Received 20 team records
+2026-04-13 18:52:48 | INFO     | extractor.api_football | api_football: fetched 20 standings, 20 teams
+2026-04-13 18:52:48 | INFO     | transformer.api_football | API-Football transformer: 20/20 records transformed successfully
+2026-04-13 18:52:52 | INFO     | loader.bigquery | Loaded 20 records into BigQuery 'standings_api_football'
+2026-04-13 18:52:54 | INFO     | loader.bigquery | Exported 20 rows to 'C:\Users\magshimim\premier-league-etl\src\..\output\standings_api_football.csv'
+2026-04-13 18:52:54 | INFO     | error_collector | Pipeline run summary
+2026-04-13 18:52:54 | INFO     | error_collector | Errors: 0
+2026-04-13 18:52:54 | INFO     | error_collector | Warnings: 0
+2026-04-13 18:52:54 | INFO     | error_collector | No issues detected
+2026-04-13 18:52:54 | INFO     | main | ETL Pipeline complete
+2026-04-13 21:51:23 | INFO     | main | Premier League ETL Pipeline started
+2026-04-13 23:16:42 | INFO     | pipeline.api_sports | Source: API-Sports
+2026-04-13 23:19:59 | INFO     | extractor.api_sports | Fetching standings: league=39, season=2023
+2026-04-13 23:20:52 | INFO     | main | Premier League ETL Pipeline started
+2026-04-13 23:20:52 | INFO     | pipeline.api_sports | Source: API-Sports
+2026-04-13 23:20:52 | INFO     | extractor.api_sports | Fetching standings: league=39, season=2023
+2026-04-13 23:23:08 | DEBUG    | extractor.api_sports | GET https://v3.football.api-sports.io/standings — attempt 1/3
+2026-04-13 23:38:20 | INFO     | extractor.api_sports | Fetching teams: league=39, season=2023
+2026-04-13 23:40:35 | DEBUG    | extractor.api_sports | GET https://v3.football.api-sports.io/teams — attempt 1/3
+2026-04-13 23:46:44 | INFO     | main | Premier League ETL Pipeline started
+2026-04-13 23:49:42 | INFO     | pipeline.api_sports | Source: API-Sports
+2026-04-13 23:49:47 | INFO     | extractor.api_sports | Fetching standings: league=39, season=2023
+2026-04-13 23:49:47 | DEBUG    | extractor.api_sports | GET https://v3.football.api-sports.io/standings — attempt 1/3
+2026-04-13 23:49:48 | INFO     | extractor.api_sports | Received 20 standings: league=39, season=2023 records
+2026-04-13 23:49:48 | INFO     | extractor.api_sports | Fetching teams: league=39, season=2023
+2026-04-13 23:49:48 | DEBUG    | extractor.api_sports | GET https://v3.football.api-sports.io/teams — attempt 1/3
+2026-04-13 23:49:48 | INFO     | extractor.api_sports | Received 20 teams: league=39, season=2023 records
+2026-04-13 23:49:48 | INFO     | extractor.api_sports | api_sports: fetched 20 standings, 20 teams
+2026-04-13 23:56:06 | INFO     | transformer.api_sports | API-Sports transformer: 20/20 records transformed successfully
+2026-04-14 00:03:44 | INFO     | main | Premier League ETL Pipeline started
+2026-04-14 00:03:44 | INFO     | pipeline.api_sports | Source: API-Sports
+2026-04-14 00:03:44 | INFO     | extractor.api_sports | Fetching standings: league=39, season=2023
+2026-04-14 00:03:44 | DEBUG    | extractor.api_sports | GET https://v3.football.api-sports.io/standings — attempt 1/3
+2026-04-14 00:03:44 | INFO     | extractor.api_sports | Received 20 standings: league=39, season=2023 records
+2026-04-14 00:03:44 | INFO     | extractor.api_sports | Fetching teams: league=39, season=2023
+2026-04-14 00:03:44 | DEBUG    | extractor.api_sports | GET https://v3.football.api-sports.io/teams — attempt 1/3
+2026-04-14 00:03:44 | INFO     | extractor.api_sports | Received 20 teams: league=39, season=2023 records
+2026-04-14 00:03:44 | INFO     | extractor.api_sports | api_sports: fetched 20 standings, 20 teams
+2026-04-14 00:03:44 | INFO     | transformer.api_sports | API-Sports transformer: 20/20 records transformed successfully
+2026-04-14 00:03:50 | INFO     | loader.bigquery | Loaded 20 records into BigQuery 'standings_api_sports'
+2026-04-14 00:03:53 | INFO     | loader.bigquery | Exported 20 rows to 'C:\Users\magshimim\premier-league-etl\src\..\output\standings_api_sports.csv'
+2026-04-14 00:04:00 | INFO     | metrics | Metrics logged for 'api_sports': 20 records, 8.96s, status=success
+2026-04-14 00:04:00 | INFO     | pipeline.api_football | Source: API-Football
+2026-04-14 00:04:00 | INFO     | extractor.api_football | Fetching standings: league_id=152
+2026-04-14 00:04:00 | DEBUG    | extractor.api_football | GET https://apiv3.apifootball.com/ — attempt 1/3
+2026-04-14 00:04:00 | INFO     | extractor.api_football | Received 20 standings: league_id=152 records
+2026-04-14 00:04:00 | INFO     | extractor.api_football | Fetching teams: league_id=152
+2026-04-14 00:04:00 | DEBUG    | extractor.api_football | GET https://apiv3.apifootball.com/ — attempt 1/3
+2026-04-14 00:04:01 | INFO     | extractor.api_football | Received 20 teams: league_id=152 records
+2026-04-14 00:04:01 | INFO     | extractor.api_football | api_football: fetched 20 standings, 20 teams
+2026-04-14 00:04:01 | INFO     | transformer.api_football | API-Football transformer: 20/20 records transformed successfully
+2026-04-14 00:04:06 | INFO     | loader.bigquery | Loaded 20 records into BigQuery 'standings_api_football'
+2026-04-14 00:04:10 | INFO     | loader.bigquery | Exported 20 rows to 'C:\Users\magshimim\premier-league-etl\src\..\output\standings_api_football.csv'
+2026-04-14 00:04:14 | INFO     | metrics | Metrics logged for 'api_football': 20 records, 10.14s, status=success
+2026-04-14 00:04:14 | INFO     | error_collector | Pipeline run summary
+2026-04-14 00:04:14 | INFO     | error_collector | Errors: 0
+2026-04-14 00:04:14 | INFO     | error_collector | Warnings: 0
+2026-04-14 00:04:14 | INFO     | error_collector | No issues detected
+2026-04-14 00:04:14 | INFO     | main | ETL Pipeline complete
+2026-04-14 00:11:00 | INFO     | main | Premier League ETL Pipeline started
+2026-04-14 00:11:00 | INFO     | pipeline.api_sports | Source: API-Sports
+2026-04-14 00:11:00 | INFO     | extractor.api_sports | Fetching standings: league=39, season=2023
+2026-04-14 00:11:00 | DEBUG    | extractor.api_sports | GET https://v3.football.api-sports.io/standings — attempt 1/3
+2026-04-14 00:11:00 | INFO     | extractor.api_sports | Received 20 standings: league=39, season=2023 records
+2026-04-14 00:11:00 | INFO     | extractor.api_sports | Fetching teams: league=39, season=2023
+2026-04-14 00:11:00 | DEBUG    | extractor.api_sports | GET https://v3.football.api-sports.io/teams — attempt 1/3
+2026-04-14 00:11:01 | INFO     | extractor.api_sports | Received 20 teams: league=39, season=2023 records
+2026-04-14 00:11:01 | INFO     | extractor.api_sports | api_sports: fetched 20 standings, 20 teams
+2026-04-14 00:11:01 | INFO     | transformer.api_sports | API-Sports transformer: 20/20 records transformed successfully
+2026-04-14 00:11:06 | INFO     | loader.bigquery | Loaded 20 records into BigQuery 'standings_api_sports'
+2026-04-14 00:11:10 | INFO     | loader.bigquery | Exported 20 rows to 'C:\Users\magshimim\premier-league-etl\src\..\output\standings_api_sports.csv'
+2026-04-14 00:11:21 | INFO     | metrics | Metrics logged for 'api_sports': 20 records, 10.15s, status=success
+2026-04-14 00:11:21 | INFO     | pipeline.api_football | Source: API-Football
+2026-04-14 00:11:21 | INFO     | extractor.api_football | Fetching standings: league_id=152
+2026-04-14 00:11:21 | DEBUG    | extractor.api_football | GET https://apiv3.apifootball.com/ — attempt 1/3
+2026-04-14 00:11:22 | INFO     | extractor.api_football | Received 20 standings: league_id=152 records
+2026-04-14 00:11:22 | INFO     | extractor.api_football | Fetching teams: league_id=152
+2026-04-14 00:11:22 | DEBUG    | extractor.api_football | GET https://apiv3.apifootball.com/ — attempt 1/3
+2026-04-14 00:11:23 | INFO     | extractor.api_football | Received 20 teams: league_id=152 records
+2026-04-14 00:11:23 | INFO     | extractor.api_football | api_football: fetched 20 standings, 20 teams
+2026-04-14 00:11:23 | INFO     | transformer.api_football | API-Football transformer: 20/20 records transformed successfully
+2026-04-14 00:11:30 | INFO     | loader.bigquery | Loaded 20 records into BigQuery 'standings_api_football'
+2026-04-14 00:11:33 | INFO     | loader.bigquery | Exported 20 rows to 'C:\Users\magshimim\premier-league-etl\src\..\output\standings_api_football.csv'
+2026-04-14 00:11:38 | INFO     | metrics | Metrics logged for 'api_football': 20 records, 11.88s, status=success
+2026-04-14 00:11:38 | INFO     | error_collector | Pipeline run summary
+2026-04-14 00:11:38 | INFO     | error_collector | Errors: 0
+2026-04-14 00:11:38 | INFO     | error_collector | Warnings: 0
+2026-04-14 00:11:38 | INFO     | error_collector | No issues detected
+2026-04-14 00:11:38 | INFO     | main | ETL Pipeline complete
+2026-04-14 11:00:54 | INFO     | main | Premier League ETL Pipeline started
+2026-04-14 11:00:54 | INFO     | pipeline.api_sports | Source: API-Sports
+2026-04-14 11:00:54 | INFO     | extractor.api_sports | Fetching standings: league=39, season=2023
+2026-04-14 11:00:54 | DEBUG    | extractor.api_sports | GET https://v3.football.api-sports.io/standings — attempt 1/3
+2026-04-14 11:00:55 | INFO     | extractor.api_sports | Received 20 standings: league=39, season=2023 records
+2026-04-14 11:00:55 | INFO     | extractor.api_sports | Fetching teams: league=39, season=2023
+2026-04-14 11:00:55 | DEBUG    | extractor.api_sports | GET https://v3.football.api-sports.io/teams — attempt 1/3
+2026-04-14 11:00:55 | INFO     | extractor.api_sports | Received 20 teams: league=39, season=2023 records
+2026-04-14 11:00:55 | INFO     | extractor.api_sports | api_sports: fetched 20 standings, 20 teams
+2026-04-14 11:00:55 | INFO     | transformer.api_sports | API-Sports transformer: 20/20 records transformed successfully
+2026-04-14 11:01:00 | INFO     | loader.bigquery | Loaded 20 records into BigQuery 'standings_api_sports'
+2026-04-14 11:01:02 | INFO     | loader.bigquery | Exported 20 rows to 'C:\Users\magshimim\premier-league-etl\src\..\output\standings_api_sports.csv'
+2026-04-14 11:01:05 | INFO     | metrics | Metrics logged for 'api_sports': 20 records, 7.57s, status=success
+2026-04-14 11:01:05 | INFO     | pipeline.api_football | Source: API-Football
+2026-04-14 11:01:05 | INFO     | extractor.api_football | Fetching standings: league_id=152
+2026-04-14 11:01:05 | DEBUG    | extractor.api_football | GET https://apiv3.apifootball.com/ — attempt 1/3
+2026-04-14 11:01:06 | INFO     | extractor.api_football | Received 20 standings: league_id=152 records
+2026-04-14 11:01:06 | INFO     | extractor.api_football | Fetching teams: league_id=152
+2026-04-14 11:01:06 | DEBUG    | extractor.api_football | GET https://apiv3.apifootball.com/ — attempt 1/3
+2026-04-14 11:01:06 | INFO     | extractor.api_football | Received 20 teams: league_id=152 records
+2026-04-14 11:01:06 | INFO     | extractor.api_football | api_football: fetched 20 standings, 20 teams
+2026-04-14 11:01:06 | INFO     | transformer.api_football | API-Football transformer: 20/20 records transformed successfully
+2026-04-14 11:01:12 | INFO     | loader.bigquery | Loaded 20 records into BigQuery 'standings_api_football'
+2026-04-14 11:01:15 | INFO     | loader.bigquery | Exported 20 rows to 'C:\Users\magshimim\premier-league-etl\src\..\output\standings_api_football.csv'
+2026-04-14 11:01:19 | INFO     | metrics | Metrics logged for 'api_football': 20 records, 9.06s, status=success
+2026-04-14 11:01:19 | INFO     | error_collector | Pipeline run summary
+2026-04-14 11:01:19 | INFO     | error_collector | Errors: 0
+2026-04-14 11:01:19 | INFO     | error_collector | Warnings: 0
+2026-04-14 11:01:19 | INFO     | error_collector | No issues detected
+2026-04-14 11:01:19 | INFO     | main | ETL Pipeline complete
